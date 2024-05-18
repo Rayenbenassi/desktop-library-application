@@ -1,0 +1,16 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.banking.system.desktoplibraryapplication;
+
+/**
+ *
+ * @author raben
+ */
+public class DesktopLibraryApplication {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
