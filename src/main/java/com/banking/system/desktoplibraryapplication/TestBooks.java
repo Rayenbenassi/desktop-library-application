@@ -1,5 +1,6 @@
 package com.banking.system.desktoplibraryapplication;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class TestBooks {
@@ -31,13 +32,22 @@ public class TestBooks {
                 }
             }
         }
+        System.out.println("Books before tri :  " );
         for (int i = 0; i < books.length; i++) {
-        	Book tmp=new Book();
-        	if()
-        	
+            System.out.println("\nBook " + (i + 1) + ":");
+            System.out.println("Title: " + books[i].getTitle());
+            System.out.println("Author: " + books[i].getAuthor());
+            System.out.println("Number of pages: " + books[i].getNbPages());
         }
+  
+        
+        //Sorting with sortBook
+        //Book.sortBooks(books);
+        //Sorting using predefine methodes Arrays.sort
+        Arrays.sort(books);
 
         // Optionally print out the book details to verify input
+        System.out.println("Books after tri :  " );
         for (int i = 0; i < books.length; i++) {
             System.out.println("\nBook " + (i + 1) + ":");
             System.out.println("Title: " + books[i].getTitle());

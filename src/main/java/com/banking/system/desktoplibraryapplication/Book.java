@@ -2,18 +2,36 @@ package com.banking.system.desktoplibraryapplication;
 
 import java.util.UUID;
 
-public class Book {
+public class Book implements Comparable<Book> {
 	private String title, author;
 	long code;
 	private int nbPages;
 	
-	
+	@Override
+    public int compareTo(Book b) {
+		return this.getTitle().compareTo(b.getTitle());
+	}
 	public int compare( Book b) {
 		return this.getTitle().compareTo(b.getTitle());
 		
 	}
 	public static int compare( Book b1,Book b2) {
 		return b1.getTitle().compareTo(b2.getTitle());
+		
+	}
+	public static void sortBooks(Book []books ) {
+		
+		Book tmp;
+        for (int i = 0; i < books.length - 1; i++) {
+            for (int j = 0; j < books.length - 1 - i; j++) {
+                if (Book.compare(books[j], books[j + 1]) > 0) {
+                    // Swap books[j] and books[j + 1]
+                    tmp = books[j];
+                    books[j] = books[j + 1];
+                    books[j + 1] = tmp;
+                }
+            }
+        }
 		
 	}
 
