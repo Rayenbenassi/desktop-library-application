@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class TestBooks {
 
     public static void main(String[] args) {
+    	
         Book[] books = new Book[3];
 
-        try (Scanner scan = new Scanner(System.in)) {  // Scanner declared here will be closed automatically
+        try (Scanner scan = new Scanner(System.in)) {  
+        	// Scanner declared here will be closed automatically
             for (int i = 0; i < books.length; i++) {
                 books[i] = new Book();
                 System.out.println("Complete info for book number: " + (i + 1));
@@ -28,7 +30,12 @@ public class TestBooks {
                     }
                 }
             }
-        } // Scanner is automatically closed here
+        }
+        for (int i = 0; i < books.length; i++) {
+        	Book tmp=new Book();
+        	if()
+        	
+        }
 
         // Optionally print out the book details to verify input
         for (int i = 0; i < books.length; i++) {

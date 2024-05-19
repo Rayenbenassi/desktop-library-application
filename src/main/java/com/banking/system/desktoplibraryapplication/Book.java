@@ -73,17 +73,9 @@ public class Book {
 	Book book1= new Book("Welcome to the jungle","Rayen Benassi",9999);
 	Book book2= new Book("Do not be Evil","Olfa Elharzalli",10293);
 	
-	
-	
-	System.out.println("*********Books : *********");
+
+	System.out.println("*********Books :*********");
 	System.out.println(book1.toString());
 	System.out.println(book2.toString());
-
-	
-
 	}
-
-
-
-
 }
