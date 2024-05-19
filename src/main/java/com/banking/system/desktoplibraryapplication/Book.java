@@ -32,7 +32,6 @@ public class Book implements Comparable<Book> {
                 }
             }
         }
-		
 	}
 
 	public Book() {
