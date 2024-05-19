@@ -7,6 +7,31 @@ public class Book implements Comparable<Book> {
 	long code;
 	private int nbPages;
 	
+	public void replaceBookByOneAuthor(String author,Book []books) {
+		for(Book book : books) {
+			if(book.getAuthor()!=author) {
+				book = findBookByAuthor(author,books);
+			}
+		}
+	}
+
+	public Book findBookByAuthor(String author,Book []books) {
+	try {
+		for(Book book : books) {
+			if(book.getAuthor()==author) {
+				return book;
+			}
+		}
+		
+		
+	}catch (Exception e) {
+		// TODO: handle exception
+		System.out.println("Our List do not contain books of "+author);
+	}
+	return null;
+	
+	}
+		
 	@Override
     public int compareTo(Book b) {
 		return this.getTitle().compareTo(b.getTitle());

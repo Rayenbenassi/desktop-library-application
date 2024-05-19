@@ -8,7 +8,27 @@ public class TestBooks {
     public static void main(String[] args) {
     	
         Book[] books = new Book[3];
-
+        Book[]bookList =new Book[5];
+        bookList[0]=new Book("Les misérables","Victor Hugo",45);
+        bookList[1]=new Book("L'étranger","Albert Camus",56);
+        bookList[2]=new Book("Stupeur et Tremblements","Amélie Nothomb",45);
+        bookList[3]=new Book("Le Mur","Jean paul Sartre",56);
+        bookList[4]=new Book("Notre Dame de Paris","Victor Hugo",45);
+        Arrays.sort(bookList);
+        for(Book book:bookList) {
+        	
+        	if(book.getAuthor()=="Victor Hugo") {
+        		System.out.println("Book of \"Victor Hugo\" :");
+        		System.out.println(book.toString());
+        	}
+        	if(book.getTitle().startsWith("L")) {
+        		System.out.println("Book title starts with \"L\" :");
+        		System.out.println(book.toString());
+        	}
+        	
+        }
+        
+       
         try (Scanner scan = new Scanner(System.in)) {  
         	// Scanner declared here will be closed automatically
             for (int i = 0; i < books.length; i++) {
