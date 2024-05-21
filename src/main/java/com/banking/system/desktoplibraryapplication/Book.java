@@ -5,6 +5,7 @@ import java.util.UUID;
 public class Book implements Comparable<Book> {
 	private String title, author;
 	long code;
+	long ISBN;
 	private int nbPages;
 	
 	public void replaceBookByOneAuthor(String author,Book []books) {
@@ -62,14 +63,29 @@ public class Book implements Comparable<Book> {
 	public Book() {
 		super();
 		this.code = Math.abs(UUID.randomUUID().getMostSignificantBits());
+
 	}
 
+	public Book(String title, String author, int nbPages,long ISBN) {
+		super();
+		this.title = title;
+		this.author = author;
+		this.code = Math.abs(UUID.randomUUID().getMostSignificantBits());
+		this.nbPages = nbPages;
+		this.ISBN=ISBN;
+	}
 	public Book(String title, String author, int nbPages) {
 		super();
 		this.title = title;
 		this.author = author;
 		this.code = Math.abs(UUID.randomUUID().getMostSignificantBits());
 		this.nbPages = nbPages;
+		this.ISBN=0;
+	}
+
+
+	public long getISBN() {
+		return ISBN;
 	}
 
 	public String getAuthor() {
@@ -110,14 +126,14 @@ public class Book implements Comparable<Book> {
 		return "Book [title=" + title + ", author=" + author + ", code=" + code + "]";
 	}
 
-	public static void main(String[] args) {
-		
-	Book book1= new Book("Welcome to the jungle","Rayen Benassi",9999);
-	Book book2= new Book("Do not be Evil","Olfa Elharzalli",10293);
-	
-
-	System.out.println("*********Books :*********");
-	System.out.println(book1.toString());
-	System.out.println(book2.toString());
-	}
+//	public static void main(String[] args) {
+//		
+//	Book book1= new Book("Welcome to the jungle","Rayen Benassi",9999);
+//	Book book2= new Book("Do not be Evil","Olfa Elharzalli",10293);
+//	
+//
+//	System.out.println("*********Books :*********");
+//	System.out.println(book1.toString());
+//	System.out.println(book2.toString());
+//	}
 }
